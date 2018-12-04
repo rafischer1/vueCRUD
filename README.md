@@ -4,6 +4,8 @@
 
 > Project: take a morning to connect *Vue* CRUD routing to the collecti-api
 
+* Make sure __collective api__ is running locally: `npm install` `npm start`
+
 [Collective-Api](https://github.com/gSchool/collective-api)
 
 ### Bootstrap with Vue
