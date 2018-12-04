@@ -27,11 +27,7 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 0;
-  background-color: #2c3e50;
-  color: #fff9f2;
-}
+
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -43,7 +39,7 @@ body {
 main {
   text-align: center;
   margin-top: 40px;
-   color: #fff9f2;
+  
 }
 
 header {
