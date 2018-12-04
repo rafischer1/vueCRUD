@@ -1,4 +1,8 @@
-# vueCRUD
+# vueCRUD 🕶
+
+
+### Bootstrap with Vue
+`npm i bootstrap-vue@2.0.0-rc.7 bootstrap@4.1.0`
 
 ## Build Setup
 
