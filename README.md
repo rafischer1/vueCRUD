@@ -8,6 +8,13 @@
 
 [Collective-Api](https://github.com/gSchool/collective-api)
 
+```haskell
+to fix: rating on POST
+        Add: AddtoCart()
+        Edit: not necessary once AddtoCart() happens
+        Make the fun page fun and not just 🧛
+```
+
 ### Bootstrap with Vue
 `npm i bootstrap-vue@2.0.0-rc.7 bootstrap@4.1.0`
 
@@ -35,5 +42,10 @@ npm run e2e
 # run all tests
 npm test
 ```
+## Resources to explore:
+
+[Vue Markdown Parser](https://github.com/miaolz123/vue-markdown)
+
+
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
