@@ -2,6 +2,9 @@
 
 [Deployed Site on Surge](http://vuecrud-fischer.surge.sh/#/posts-manager)
 
+> Project: take a morning to connect *Vue* CRUD routing to the collecti-api
+
+[Collective-Api](https://github.com/gSchool/collective-api)
 
 ### Bootstrap with Vue
 `npm i bootstrap-vue@2.0.0-rc.7 bootstrap@4.1.0`
