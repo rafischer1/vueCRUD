@@ -1,4 +1,4 @@
-# vueCRUD 🕶
+# 🕶 vueCRUD 🕶
 
 [Deployed Site on Surge](http://vuecrud-fischer.surge.sh/#/posts-manager)
 
