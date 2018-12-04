@@ -26,20 +26,3 @@ export default new Router({
   ]
 })
 
-// export default new Router({
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Hello',
-//       component: Hello
-//     },
-//     {
-//       path: '/posts-manager',
-//       name: 'PostsManager',
-//       component: PostsManager,
-//       meta: {
-//         requiresAuth: false
-//       }
-//     }
-//   ]
-// })

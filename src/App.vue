@@ -7,9 +7,9 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/posts-manager">Posts Manager</b-nav-item>
+          <b-nav-item to="/posts-manager">Collective Api / Cameras</b-nav-item>
           <b-nav-item to="/fun-manager">Fun Manager</b-nav-item>
-          <b-nav-item href="#" @click.prevent="login" v-if="!activeUser">Login</b-nav-item>
+          <b-nav-item href="#" @click.prevent="login">Login</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
