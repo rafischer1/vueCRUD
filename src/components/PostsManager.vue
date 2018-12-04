@@ -11,6 +11,7 @@
               <th>ID</th>
               <th>Title</th>
               <th>Price</th>
+              <th>Rating</th>
               <th>&nbsp;</th>
             </tr>
           </thead>
@@ -19,9 +20,10 @@
               <td>{{ post.id }}</td>
               <td>{{ post.name }}</td>
               <td>${{ post.price }}</td>
+              <td>{{ post.rating }}</td>
               <td class="text-right">
                 <a href="#" @click.prevent="populatePostToEdit(post)">Edit</a> -
-                <a href="#" @click.prevent="deletePost(post.id)">Delete</a>
+                <a href="#editForm" @click.prevent="deletePost(post.id)">Delete</a>
               </td>
             </tr>
           </tbody>
@@ -33,26 +35,36 @@
       </b-col>
       
       <br />
-          <b-col lg="3" class="form-title">Add/Edit Camera Form
+          <b-col lg="3" class="form-title" name="editForm">Add/Edit Camera Form
         <b-card :title="(model.id ? 'Edit Post ID#' + model.id : 'New Post')">
-          <form @submit.prevent="savePost">
+          <form @submit.prevent="savePost" >
             <b-form-group label="Camera Name">
-              <b-form-input type="text" v-model="model.name"></b-form-input>
+              <b-form-input type="text" v-model="model.name" required></b-form-input>
             </b-form-group>
             <b-form-group label="Price">
-              <b-form-textarea rows="1" v-model="model.price"></b-form-textarea>
+              <b-form-input type="number" :min="0"  placeholder='0.00' v-model="model.price" required></b-form-input>
+            </b-form-group>
+            <b-form-group label="Rating">
+              <b-form-input type="number" :min="0" :max="5" placeholder='0' v-model="model.rating" required></b-form-input>
             </b-form-group>
              <b-form-group label="Image Url">
-              <b-form-textarea rows="1" v-model="model.picture"></b-form-textarea>
+              <b-form-textarea type="text" rows="1" v-model="model.picture"></b-form-textarea>
             </b-form-group>
+            <br/>
+               <b-form-checkbox id="checkbox1"
+                     v-model="model.inCart"
+                     value="true"
+                     unchecked-value="false">Yes, I am in the Cart
+                 </b-form-checkbox>
             <div>
               <b-btn type="submit" variant="success">Submit Camera</b-btn>
             </div>
+            <br>
+            <p>Note: the edit is set up as `/api/cameras/${id}/add` so the changes reflected in the edit are not reflected in the actual cart.</p>
           </form>
         </b-card>
       </b-col>
     </b-row>
-  </div>
   </div>
 </template>
 
@@ -80,6 +92,15 @@ export default {
       this.model = Object.assign({}, post)
     },
     async savePost () {
+      console.log("savePost model", this.model)
+      if (typeof this.model.inCart === "string") {
+        this.model.inCart = Boolean(this.model.inCart)
+        console.log(typeof this.model.inCart)
+      }
+       if (typeof this.model.onSale === "string") {
+        this.model.onSale = Boolean(this.model.onSale)
+        console.log(typeof this.model.onSale)
+      }
       if (this.model.id) {
         await api.updatePost(this.model.id, this.model)
       } else {
@@ -125,8 +146,14 @@ form {
 }
 
 .form-title {
+  margin-top: 5px;
+  position: relative;
   font-size: 30px;
   font-weight: bold;
+}
+
+p {
+  color: rgb(35, 35, 63);
 }
 
 </style>

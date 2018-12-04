@@ -25,10 +25,12 @@ export default {
       return this.execute('get', `/api/cameras/${id}`)
   },
   createPost(data) {
+      console.log("in POST data:", data)
       return this.execute('post', '/api/cameras', data)
   },
   updatePost(id, data) {
-      return this.execute('put', `/api/cameras/${id}`, data)
+      console.log("in api id, post data:", id, data)
+      return this.execute('patch', `/api/cameras/${id}/add`, data)
   },
   deletePost(id) {
       return this.execute('delete', `/api/cameras/${id}`)
