@@ -3,12 +3,12 @@
     <header>
        <b-navbar toggleable="md" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand to="/">vueCRUD</b-navbar-brand>
+      <b-navbar-brand to="https://fischervuecrud.herokuapp.com">vueCRUD</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/posts-manager">Collective Api / Cameras</b-nav-item>
-          <b-nav-item to="/fun-manager">Fun Manager</b-nav-item>
+          <b-nav-item to="https://fischervuecrud.herokuapp.com">Home</b-nav-item>
+          <b-nav-item to="https://fischervuecrud.herokuapp.com/posts-manager">Collective Api / Cameras</b-nav-item>
+          <b-nav-item to="https://fischervuecrud.herokuapp.com/fun-manager">Fun Manager</b-nav-item>
           <b-nav-item href="#" @click.prevent="login">Login</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
