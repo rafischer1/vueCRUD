@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <header>
-       <b-navbar toggleable="md" type="dark" variant="dark">
+       <b-navbar toggleable="md" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-navbar-brand to="/">vueCRUD</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/">Posts Manager</b-nav-item>
-          <b-nav-item to="/">Fun Manager</b-nav-item>
+          <b-nav-item to="/posts-manager">Posts Manager</b-nav-item>
+          <b-nav-item to="/fun-manager">Fun Manager</b-nav-item>
           <b-nav-item href="#" @click.prevent="login" v-if="!activeUser">Login</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -29,6 +29,8 @@ export default {
 <style>
 body {
   margin: 0;
+  background-color: #2c3e50;
+  color: #fff9f2;
 }
 
 #app {
@@ -41,6 +43,7 @@ body {
 main {
   text-align: center;
   margin-top: 40px;
+   color: #fff9f2;
 }
 
 header {
@@ -59,6 +62,6 @@ header span {
   letter-spacing: .02em;
   font-weight: 400;
   box-sizing: border-box;
-  padding-top: 16px;
+  padding-top: 18px;
 }
 </style>
