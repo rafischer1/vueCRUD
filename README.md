@@ -1,6 +1,6 @@
 # vueCRUD 🕶
 
-(Deployed Site on Surge)[http://vuecrud-fischer.surge.sh/#/posts-manager]
+[Deployed Site on Surge](http://vuecrud-fischer.surge.sh/#/posts-manager)
 
 
 ### Bootstrap with Vue
